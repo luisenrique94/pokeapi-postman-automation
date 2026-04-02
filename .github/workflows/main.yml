@@ -9,6 +9,9 @@ on:
 jobs:
   test-api:
     runs-on: ubuntu-latest
+    # Añadimos la variable de entorno que sugiere GitHub para usar Node 24
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout del código
