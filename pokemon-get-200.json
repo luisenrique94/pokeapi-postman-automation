@@ -1,0 +1,19 @@
+{
+  "info": {
+    "_postman_id": "432ac443-93b1-4621-a428-c7252a30d4ac",
+    "name": "POKEMON",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "4259623",
+    "_collection_link": "https://go.postman.co/collection/4259623-432ac443-93b1-4621-a428-c7252a30d4ac?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET-200",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
