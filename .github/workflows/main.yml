@@ -28,14 +28,14 @@ jobs:
         
 
       - name: Ejecutar pruebas de Postman
-        run: newman run pokemon-get-200.json -r cli,htmlextra --reporter-htmlextra-export results/reporte.html
+        run: newman run pokemon-get-200.json -r cli,htmlextra --reporter-htmlextra-export reporte.html
       - name: Caracteristicas pokemon
-        run: newman run pokemon-caracteristicas-get-200.json -r cli,htmlextra --reporter-htmlextra-export results/reporte.html
+        run: newman run pokemon-caracteristicas-get-200.json -r cli,htmlextra --reporter-htmlextra-export reporte.html
 
       - name: Subir reporte a GitHub
         uses: actions/checkout@v4 # Asegura que estamos en el contexto correcto
         if: always() # Esto hace que el reporte se suba aunque los tests fallen
         with:
           name: reporte-de-pruebas
-          path: results/reporte.html  
+          path: reporte.html  
 
