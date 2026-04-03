@@ -1,0 +1,13 @@
+$kind: http-request
+name: pokemon-caracteristicas-get-200
+url: https://pokeapi.co/api/v2/egg-group/1
+method: GET
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code is 200\", function () {\r
+
+      \    pm.response.to.have.status(200);\r
+
+      });"
+    language: text/javascript
+order: 1775170233165
