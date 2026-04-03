@@ -24,9 +24,10 @@ jobs:
           node-version: '24'
 
       - name: Instalar Newman
-        run: npm install -g newman
+        run: npm install -g newman npm install -g newman-reporter-htmlextra
+        
 
       - name: Ejecutar pruebas de Postman
-        run: newman run pokemon-get-200.json
+        run: newman run pokemon-get-200.json -r cli,htmlextra --reporter-htmlextra-export results/reporte.html
       - name: Caracteristicas pokemon
-        run: newman run pokemon-caracteristicas-get-200.json
+        run: newman run pokemon-caracteristicas-get-200.json -r cli,htmlextra --reporter-htmlextra-export results/reporte.html
