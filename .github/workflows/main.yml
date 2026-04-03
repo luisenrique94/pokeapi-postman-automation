@@ -33,7 +33,7 @@ jobs:
         run: newman run pokemon-caracteristicas-get-200.json -r cli,htmlextra --reporter-htmlextra-export reporte.html
 
       - name: Subir reporte a GitHub
-        uses: actions/checkout@v4 # Asegura que estamos en el contexto correcto
+        uses: actions/upload-artifact@v4 # Asegura que estamos en el contexto correcto
         if: always() # Esto hace que el reporte se suba aunque los tests fallen
         with:
           name: reporte-de-pruebas
