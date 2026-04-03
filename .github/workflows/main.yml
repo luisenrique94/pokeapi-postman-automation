@@ -28,3 +28,5 @@ jobs:
 
       - name: Ejecutar pruebas de Postman
         run: newman run pokemon-get-200.json
+      - name: Caracteristicas pokemon
+        run: newman run pokemon-caracteristicas-get-200.json
