@@ -28,9 +28,9 @@ jobs:
         
 
       - name: Ejecutar pruebas de Postman
-        run: newman run pokemon-get-200.json -r cli,htmlextra --reporter-htmlextra-export reporte.html
+        run: newman run pokemon-get-200.json -r cli,htmlextra --reporter-htmlextra-export reporte1.html
       - name: Caracteristicas pokemon
-        run: newman run pokemon-caracteristicas-get-200.json -r cli,htmlextra --reporter-htmlextra-export reporte.html
+        run: newman run pokemon-caracteristicas-get-200.json -r cli,htmlextra --reporter-htmlextra-export reporte2.html
 
       - name: Subir reporte a GitHub
         uses: actions/upload-artifact@v4 # Asegura que estamos en el contexto correcto
